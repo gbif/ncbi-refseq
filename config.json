@@ -1,0 +1,42 @@
+{
+  "PRJNA33317": {
+    "title": "Archaeal 16S Ribosomal RNA RefSeq Targeted Loci Project (NCBI)",
+    "marker": "16S"
+  },
+  "PRJNA188107": {
+    "title": "Archaeal 5S Ribosomal RNA RefSeq Targeted Loci Project (NCBI)",
+    "marker": "5S"
+  },
+  "PRJNA188942": {
+    "title": "Archaeal 23S Ribosomal RNA RefSeq Targeted Loci Project (NCBI)",
+    "marker": "23S"
+  },
+  "PRJNA33175": {
+    "title": "Bacterial 16S Ribosomal RNA RefSeq Targeted Loci Project (NCBI)",
+    "marker": "16S"
+  },
+  "PRJNA188943": {
+    "title": "Bacterial 23S Ribosomal RNA RefSeq Targeted Loci Project (NCBI)",
+    "marker": "23S"
+  },
+  "PRJNA188106": {
+    "title": "Bacterial 5S Ribosomal RNA RefSeq Targeted Loci Project (NCBI)",
+    "marker": "5S"
+  },
+  "PRJNA39195": {
+    "title": "Fungal 18S Ribosomal RNA (SSU) RefSeq Targeted Loci Project (NCBI)",
+    "marker": "18S"
+  },
+  "PRJNA51803": {
+    "title": "Fungal 28S Ribosomal RNA (LSU) RefSeq Targeted Loci Project. (NCBI)",
+    "marker": "28S"
+  },
+  "PRJNA177353": {
+    "title": "Fungal Internal Transcribed Spacer RNA (ITS) RefSeq Targeted Loci Project (NCBI)",
+    "marker": "ITS"
+  },
+  "PRJNA362621": {
+    "title": "Oomycetes Internal Transcribed Spacer RNA (ITS) RefSeq Targeted Loci Project (NCBI)",
+    "marker": "ITS"
+  }
+}

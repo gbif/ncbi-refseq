@@ -1,0 +1,38 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        system="http://gbif.org" scope="system"
+         xml:lang="eng">
+
+<dataset>
+  <alternateIdentifier>http://www.ncbi.nlm.nih.gov/bioproject/PRJNA188107</alternateIdentifier>
+  <title xml:lang="eng">Archaeal 5S Ribosomal RNA RefSeq Targeted Loci Project
+</title>
+
+     
+  <pubDate>
+      2013-01-30
+  </pubDate>
+  <language>eng</language>
+  <abstract>
+  <para>The 5S ribosomal RNA targeted loci project is the result of an international collaboration between a number of ribosomal RNA databases and NCBI to provide a curated and comprehensive set of complete and near full length Reference Sequence records for phylogenetic and evolutionary analyses. Sequences that represent the consensus of all contributing databases in both sequence content and taxonomic assignment are promoted to RefSeqs. All sequences will have the same project ID and can be found as such. Database URL: http://www.ncbi.nlm.nih.gov/bioproject/PRJNA188107.</para>
+  </abstract>
+      <keywordSet>
+            <keyword>Metadata</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+  <intellectualRights>
+    <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+  </intellectualRights>
+
+  <maintenance>
+    <description>
+      <para></para>
+    </description>
+    <maintenanceUpdateFrequency>unkown</maintenanceUpdateFrequency>
+  </maintenance>
+
+
+</dataset>
+</eml:eml>
