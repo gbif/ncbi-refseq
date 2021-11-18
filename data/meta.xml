@@ -32,6 +32,7 @@
         <field index="23" term="http://rs.tdwg.org/dwc/terms/order"/>
         <field index="24" term="http://rs.tdwg.org/dwc/terms/family"/>
         <field index="25" term="http://rs.tdwg.org/dwc/terms/genus"/>
+        <field index="26" term="http://rs.tdwg.org/dwc/terms/institutionCode"/>
 
         <!-- defaults -->
     </core>

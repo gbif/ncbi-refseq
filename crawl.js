@@ -140,6 +140,14 @@ const getHigherTaxa = (record) => {
   }
 };
 
+const getInstitutionCode = record => {
+  if(!record.specimen_voucher){
+    return "";
+  } else {
+    const splitted = record.specimen_voucher.split(":");
+    return splitted[0]
+  }
+}
 const project_name =
   "Fungal Internal Transcribed Spacer RNA (ITS) RefSeq Targeted Loci Project";
 const marker = "ITS";
@@ -220,7 +228,7 @@ const writeDwc = async (term, projectConfig) => {
             row.sequence
           )}\t${getTaxonConceptID(row)}\t${getAssociatedSequences(
             row
-          )}\t${getOriginalAccesion(row)}\t${getHigherTaxa(row)}\n`
+          )}\t${getOriginalAccesion(row)}\t${getHigherTaxa(row)}\t${getInstitutionCode(row)}\n`
         );
         // coreId, marker, sequence, primer_name_forward, primer_name_reverse, pcr_primer_forward, pcr_primer_reverse
         dnaStream.write(
