@@ -55,6 +55,7 @@
       <gbif>
           <bibliography>
             <citation identifier="DOI:10.1093/nar/gkv1189">O'Leary, N.A., Wright, M.W., Brister, J.R., Ciufo, S., Haddad, D., McVeigh, R., Rajput, B., Robbertse, B., Smith-White, B., Ako-Adjei, D., Astashyn, A., Badretdin, A., Bào, Y., Blinkova, O., Brover, V., Chetvernin, V., Choi, J., Cox, E., Ermolaeva, O.D., Farrell, C.M., Goldfarb, T., Gupta, T., Haft, D.H., Hatcher, E., Hlavina, W., Joardar, V.S., Kodali, V.K., Li, W.J., Maglott, D.R., Masterson, P., McGarvey, K.M., Murphy, M.R., O'Neill, K., Pujar, S., Rangwala, S.H., Rausch, D., Riddick, L.D., Schoch, C.L., Shkeda, A., Storz, S.S., Sun, H., Thibaud-Nissen, F., Tolstoy, I., Tully, R.E., Vatsan, A.R., Wallin, C., Webb, D., Wu, W.X., Landrum, M.J., Kimchi, A., Tatusova, T.A., DiCuccio, M., Kitts, P.A., Murphy, T.D., Pruitt, K.D. (2016). Reference sequence (RefSeq) database at NCBI: current status, taxonomic expansion, and functional annotation. Nucleic Acids Research, 44, D733 - D745.</citation>
+            <citation identifier="DOI:10.1186/s12859-021-04316-z">Schäffer AA, McVeigh R, Robbertse B, Schoch CL, Johnston A, Underwood BA, Karsch-Mizrachi I, Nawrocki EP. Ribovore: ribosomal RNA sequence analysis for GenBank submissions and database curation. BMC Bioinformatics. 2021 Aug 12;22(1):400.</citation>
           </bibliography>
       </gbif>
     </metadata>

@@ -168,8 +168,7 @@ const getTaxa = (idList) => {
               taxon.id = _.get(element, "TaxId[0]", "");
               taxon.canonicalName = _.get(element, "ScientificName[0]", "");
               const sciName = _.get(element, "OtherNames[0].Name", []).find(
-                (e) => _.get(e, "ClassCDE[0]") === "authority"
-              );
+                (e) => _.get(e, "ClassCDE[0]") === "authority" && (_.get(e, "DispName[0]", "").startsWith(taxon.canonicalName)) || _.get(e, "DispName[0]", "").startsWith(`"${taxon.canonicalName}"`) );
               if (sciName) {
                 taxon.scientificName = _.get(sciName, "DispName[0]");
               }

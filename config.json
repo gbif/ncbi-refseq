@@ -1,27 +1,33 @@
 {
   "PRJNA33317": {
     "title": "Archaeal 16S Ribosomal RNA RefSeq Targeted Loci Project (NCBI)",
-    "marker": "16S"
+    "marker": "16S",
+    "defaultKingdom": "Archaea"
   },
   "PRJNA188107": {
     "title": "Archaeal 5S Ribosomal RNA RefSeq Targeted Loci Project (NCBI)",
-    "marker": "5S"
+    "marker": "5S",
+    "defaultKingdom": "Archaea"
   },
   "PRJNA188942": {
     "title": "Archaeal 23S Ribosomal RNA RefSeq Targeted Loci Project (NCBI)",
-    "marker": "23S"
+    "marker": "23S",
+    "defaultKingdom": "Archaea"
   },
   "PRJNA33175": {
     "title": "Bacterial 16S Ribosomal RNA RefSeq Targeted Loci Project (NCBI)",
-    "marker": "16S"
+    "marker": "16S",
+    "defaultKingdom": "Bacteria"
   },
   "PRJNA188943": {
     "title": "Bacterial 23S Ribosomal RNA RefSeq Targeted Loci Project (NCBI)",
-    "marker": "23S"
+    "marker": "23S",
+    "defaultKingdom": "Bacteria"
   },
   "PRJNA188106": {
     "title": "Bacterial 5S Ribosomal RNA RefSeq Targeted Loci Project (NCBI)",
-    "marker": "5S"
+    "marker": "5S",
+    "defaultKingdom": "Bacteria"
   },
   "PRJNA39195": {
     "title": "Fungal 18S Ribosomal RNA (SSU) RefSeq Targeted Loci Project (NCBI)",

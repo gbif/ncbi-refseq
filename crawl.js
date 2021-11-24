@@ -127,12 +127,12 @@ const getTaxonID = (record) => {
   }
 };
 
-const getHigherTaxa = (record) => {
+const getHigherTaxa = (record, defaultKingdom) => {
   const canonicalRanks = _.get(record, "taxon.canonicalRanks");
   if (!canonicalRanks) {
     return `\t\t\t\t\t`;
   } else {
-    return `${canonicalRanks["kingdom"] || ""}\t${
+    return `${canonicalRanks["kingdom"] || defaultKingdom || ""}\t${
       canonicalRanks["phylum"] || ""
     }\t${canonicalRanks["class"] || ""}\t${canonicalRanks["order"] || ""}\t${
       canonicalRanks["family"] || ""
@@ -141,16 +141,16 @@ const getHigherTaxa = (record) => {
 };
 
 const getInstitutionCode = record => {
-  if(!record.specimen_voucher){
+  if(!record.specimen_voucher && !record.culture_collection){
     return "";
-  } else {
+  } else if(record.specimen_voucher) {
     const splitted = record.specimen_voucher.split(":");
+    return splitted[0]
+  } else if(record.culture_collection){
+    const splitted = record.culture_collection.split(":");
     return splitted[0]
   }
 }
-const project_name =
-  "Fungal Internal Transcribed Spacer RNA (ITS) RefSeq Targeted Loci Project";
-const marker = "ITS";
 
 const getPage = async (term, offset, retries = 5) => {
   let ret = retries;
@@ -193,7 +193,7 @@ const attachTaxa = async (data, retries = 5) => {
 };
 
 const writeDwc = async (term, projectConfig) => {
-  const { marker, title } = projectConfig;
+  const { marker, title, defaultKingdom } = projectConfig;
   var occStream = fs.createWriteStream(__dirname + "/data/occurrence.txt", {
     flags: "a",
   });
@@ -222,13 +222,13 @@ const writeDwc = async (term, projectConfig) => {
             row
           )}\t${row.collection_date || ""}\t${row.collected_by || ""}\t${
             row.indentified_by || ""
-          }\t${row.specimen_voucher || ""}\t${getAssociatedReferences(
+          }\t${row.specimen_voucher || row.culture_collection || ""}\t${getAssociatedReferences(
             row
           )}\t${BASIS_OF_RECORD}\t${row.title}\tASV:${md5(
             row.sequence
           )}\t${getTaxonConceptID(row)}\t${getAssociatedSequences(
             row
-          )}\t${getOriginalAccesion(row)}\t${getHigherTaxa(row)}\t${getInstitutionCode(row)}\n`
+          )}\t${getOriginalAccesion(row)}\t${getHigherTaxa(row, defaultKingdom)}\t${getInstitutionCode(row)}\n`
         );
         // coreId, marker, sequence, primer_name_forward, primer_name_reverse, pcr_primer_forward, pcr_primer_reverse
         dnaStream.write(
