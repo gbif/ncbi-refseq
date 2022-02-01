@@ -262,11 +262,18 @@ const writeDwc = async (term, projectConfig) => {
 
 const writeEml = (projectName) => {
     console.log("Writing EML")
-    var readStream = fs.createReadStream(__dirname + `/eml/${projectName}.xml`);
-    var writeStream = fs.createWriteStream(__dirname + "/data/eml.xml")
-    readStream.pipe(writeStream);
-    writeStream.on('finish', () => console.log("EML Done."))
-
+      const getEml = require(__dirname + `/eml/${projectName}`);   
+      let pubDate = new Date().toISOString().split('T')[0];
+      const eml = getEml(pubDate)
+      fs.writeFile(__dirname + "/data/eml.xml", eml, 'utf8', (err)=>{
+        if(err){
+          console.log(err)
+          // the build must fail if no eml
+          throw err
+        } else {
+          console.log("EML Done. PubDate "+pubDate)
+        }
+      })
 }
 
 const projectName = _.get(process.argv.slice(2), '[0]');
@@ -279,5 +286,5 @@ if (!config[projectName]) {
 } else {
   const term = `${projectName}[BioProject]`;
   writeDwc(term, config[projectName]);
-  writeEml(projectName);
+  writeEml(projectName);   
 }
